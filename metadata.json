@@ -1,0 +1,7 @@
+{
+  "name": "OriginPoint: Ancestry & Land Reconciler",
+  "description": "A world-class AI suite for redesigning, connecting, and challenging ancestry and land records using multi-modal Gemini intelligence, search grounding, and deep reasoning.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
