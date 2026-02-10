@@ -4,21 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OriginPoint</title>
+    <title>OriginPoint | Advanced Archival Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4"
-  }
-}
-</script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4"
+      }
+    }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        overflow-x: hidden;
+      }
+      .serif {
+        font-family: 'Playfair Display', serif;
+      }
+      
+      /* Distinguished Archival Background */
+      .archival-bg {
+        background-color: #fdfcf7;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      .archival-bg::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(#d1d5db 0.8px, transparent 0.8px);
+        background-size: 32px 32px;
+        opacity: 0.4;
+        z-index: -1;
+      }
+
+      /* Historical Image Overlays */
+      .historical-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        pointer-events: none;
+        overflow: hidden;
+      }
+
+      .historical-image {
+        position: absolute;
+        opacity: 0.04;
+        filter: grayscale(100%) sepia(50%) contrast(120%);
+        mix-blend-mode: multiply;
+      }
+
+      .img-1 { top: -10%; left: -5%; width: 45%; transform: rotate(-5deg); }
+      .img-2 { bottom: -10%; right: -5%; width: 40%; transform: rotate(10deg); }
+      .img-3 { top: 40%; right: 10%; width: 25%; opacity: 0.03; }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(229, 231, 235, 0.6);
+      }
+
+      .gold-border {
+        border-image: linear-gradient(to bottom right, #d4af37, #f1d592, #d4af37) 1;
+      }
+
+      /* Custom Scrollbar for a sleek look */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="archival-bg text-slate-900">
+    <div class="historical-overlay">
+        <!-- Famous Historical Map/Archival Images (Public Domain Style) -->
+        <img src="https://images.unsplash.com/photo-1524522173746-f628baad3644?q=80&w=2000&auto=format&fit=crop" class="historical-image img-1" alt="Vintage Map">
+        <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?q=80&w=2000&auto=format&fit=crop" class="historical-image img-2" alt="Old Library">
+        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=2000&auto=format&fit=crop" class="historical-image img-3" alt="Archival Script">
+    </div>
     <div id="root"></div>
 </body>
 </html>
